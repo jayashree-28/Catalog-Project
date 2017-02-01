@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Catalog Suite" parallel="tests" thread-count= "5">
+<listeners>
+      <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+      <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+      <listener class-name="org.testng.reporters.FailedReporter"/>
+  </listeners>
+<test name="Regression_chrome">
+	<parameter name="browser" value="Chrome" />
+ 	<classes>
+ 		<class name="com.catalog.test.SignInTestsFactory">
+ 		</class>
+ 	</classes>
+ </test>
+<test name="Regression_firefox">
+	<parameter name="browser" value="Firefox" />
+ 	<classes>
+ 		<class name="com.catalog.test.SignInTestsFactory">
+ 		</class>
+ 	</classes>
+ </test>
+ </suite>
+ 
